@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup as bs
 from datetime import datetime, date, timedelta
 
+
 def get_temperature_of_day(date=datetime.now().day, 
                            month=datetime.now().month if len(str(datetime.now().month)) == 2 else f'0{datetime.now().month}',
                            year = datetime.now().year,

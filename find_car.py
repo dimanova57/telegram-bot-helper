@@ -29,5 +29,4 @@ def search_car_by_num(num: str):
 
     return pretty_str, True
 
-search_car_by_num('Илон Маск')
 

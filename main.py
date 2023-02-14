@@ -11,8 +11,10 @@ BOT_KEY = '5527604310:AAF9c5E9n5HluiKj6AB2oBR0bYUlA1yytgg'
 def start(update, context):
     update.message.reply_text('Привітик)\nЯк твої справи?😉\nЧекаю твої запити)')
 
+
 def search_car(update, context):
-    update.message.reply_text('Please write num of some car')
+    update.message.reply_text('Без питань😉\nНапиши номер автівки і я скину тобі всю інформацію')
+
 
 def make_markup():
     today = date.today()
@@ -111,7 +113,7 @@ def make_markup_city():
 
     return InlineKeyboardMarkup(keyboard)
 def search_info(update, context):
-    update.message.reply_text('Please write some person or other info: ')
+    update.message.reply_text('Добре)😉\nТоді впиши імя відомої людини\n або інший запит: ')
 
 def weather(update, context):
     temp = get_temperature_of_day()
@@ -121,14 +123,14 @@ def mein_communication(inp_text):
     user_message = str(inp_text).lower()
     if user_message in ('hi', 'hello', 'привіт', 'добрий день'):
         return 'Привітик)\nЯк твої справи?😉\nЧекаю твої запити)'
-    if user_message in ('слава укрїні', 'україна переможе'):
+    if user_message in ('слава україні', 'україна переможе'):
         return 'Героям слава'
     elif len(''.join(user_message.split(' '))) >= 8 and search_car_by_num(user_message.upper())[1]:
         return search_car_by_num(user_message.upper())[0]
     elif wiki_search.search_some_info(user_message):
         return wiki_search.search_some_info(user_message)
     else:
-        return 'Hi, I dont understand!'
+        return 'Вибач😞\nЯ не зміг знайти інформації по запиту'
 
 
 

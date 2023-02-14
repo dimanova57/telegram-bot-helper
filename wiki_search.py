@@ -1,5 +1,6 @@
 import wikipedia
 
+
 def search_some_info(info):
     wikipedia.set_lang('ru')
     print('I am searching')
