@@ -5,7 +5,7 @@ from weather_parser import get_temperature_of_day
 from datetime import date, timedelta
 from find_car import search_car_by_num
 
-BOT_KEY = '5527604310:AAF9c5E9n5HluiKj6AB2oBR0bYUlA1yytgg'
+BOT_KEY = 'Secret key'
 
 
 def start(update, context):
